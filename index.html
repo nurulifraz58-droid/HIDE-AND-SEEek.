@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEARCH ENGINE INFORMATION -->
+<meta name="description"
+content="HIDE AND SEEek - Mystery boxes, anime figures, action figures, cricket figures and customizable collectibles. Founded and owned by Aslam Azad.">
+
+<meta name="keywords"
+content="HIDE AND SEEek, mystery box, anime figures, action figures, cricket figures, custom figures, Aslam Azad">
+
+<meta name="author" content="Aslam Azad">
+
+<title>HIDE AND SEEek | Mystery Boxes & Figures</title>
+
+<style>
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body {
+    background:#bfeeff;
+    color:#123047;
+}
+
+/* NAVBAR */
+
+header {
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+nav {
+    max-width:1250px;
+    margin:auto;
+    padding:15px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo {
+    font-size:25px;
+    font-weight:900;
+    color:#075985;
+}
+
+.owner-small {
+    font-size:11px;
+    color:#607d8b;
+}
+
+.nav-links {
+    display:flex;
+    list-style:none;
+    gap:18px;
+}
+
+.nav-links a {
+    text-decoration:none;
+    color:#123047;
+    font-weight:bold;
+}
+
+.nav-links a:hover {
+    color:#0284c7;
+}
+
+.cart-button {
+    border:none;
+    background:#075985;
+    color:white;
+    padding:11px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero {
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero-content {
+    max-width:1000px;
+    animation:fadeUp 1s;
+}
+
+.hero h1 {
+    font-size:clamp(45px,8vw,90px);
+    color:#064e70;
+}
+
+.hero h2 {
+    font-size:clamp(25px,5vw,45px);
+    margin:10px 0 20px;
+}
+
+.hero p {
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+/* BUTTON */
+
+.btn {
+    border:none;
+    background:#075985;
+    color:white;
+    padding:14px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    margin:5px;
+    transition:.3s;
+}
+
+.btn:hover {
+    transform:translateY(-4px);
+    background:#0369a1;
+}
+
+/* UPLOAD */
+
+.upload-box {
+    margin:35px auto;
+    max-width:650px;
+    min-height:190px;
+    border:3px dashed #0284c7;
+    border-radius:20px;
+    background:rgba(255,255,255,.5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:20px;
+}
+
+.upload-label {
+    background:white;
+    color:#075985;
+    padding:12px 20px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.upload-box input {
+    display:none;
+}
+
+.preview {
+    display:none;
+    max-width:100%;
+    max-height:300px;
+    margin-top:15px;
+    border-radius:15px;
+}
+
+/* SECTIONS */
+
+section {
+    padding:75px 7%;
+}
+
+.section-title {
+    text-align:center;
+    font-size:40px;
+    color:#064e70;
+    margin-bottom:40px;
+}
+
+/* PRODUCTS */
+
+.products {
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.card {
+    background:white;
+    padding:20px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.card:hover {
+    transform:translateY(-8px);
+}
+
+.product-image {
+    height:200px;
+    border:2px dashed #38a9d6;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:#e8f9ff;
+    margin-bottom:15px;
+}
+
+.product-image img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.price {
+    font-size:20px;
+    font-weight:bold;
+    margin:10px;
+}
+
+/* CUSTOM */
+
+.custom-box,
+.contact-form {
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.form-group {
+    margin-bottom:18px;
+}
+
+.form-group label {
+    display:block;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+input,
+select,
+textarea {
+    width:100%;
+    padding:13px;
+    border:2px solid #b7ddea;
+    border-radius:12px;
+    outline:none;
+}
+
+textarea {
+    min-height:120px;
+}
+
+/* ABOUT */
+
+.about-text {
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.owner-box {
+    max-width:550px;
+    margin:30px auto;
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 7px 20px rgba(0,0,0,.1);
+}
+
+.owner-name {
+    font-size:28px;
+    font-weight:900;
+    color:#064e70;
+    margin:8px;
+}
+
+/* INSTAGRAM */
+
+.social {
+    text-align:center;
+}
+
+.instagram {
+    display:inline-block;
+    margin:10px;
+    padding:15px 25px;
+    background:white;
+    color:#075985;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+/* ORDER */
+
+.order-box {
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.order-summary {
+    background:#e8f9ff;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.order-summary h3 {
+    color:#075985;
+}
+
+/* FOOTER */
+
+footer {
+    background:#064e70;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h2 {
+    font-size:30px;
+}
+
+footer p {
+    margin:10px;
+}
+
+/* CART */
+
+.cart-panel {
+    position:fixed;
+    top:0;
+    right:-420px;
+    width:380px;
+    max-width:90%;
+    height:100%;
+    background:white;
+    z-index:3000;
+    padding:25px;
+    box-shadow:-5px 0 25px rgba(0,0,0,.2);
+    transition:.4s;
+    overflow-y:auto;
+}
+
+.cart-panel.open {
+    right:0;
+}
+
+.cart-close {
+    float:right;
+    border:none;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.cart-item {
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.cart-total {
+    font-size:21px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+/* SUCCESS */
+
+.success {
+    display:none;
+    text-align:center;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    max-width:700px;
+    margin:30px auto;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.success h2 {
+    color:#075985;
+    margin-bottom:15px;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px) {
+
+    .nav-links {
+        display:none;
+    }
+
+    nav {
+        padding:15px;
+    }
+
+    .hero h1 {
+        font-size:50px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<header>
+
+<nav>
+
+<div>
+
+<div class="logo">
+HIDE AND SEEek
+</div>
+
+<div class="owner-small">
+Owned by Aslam Azad
+</div>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#mystery">Mystery Boxes</a></li>
+<li><a href="#action">Action</a></li>
+<li><a href="#anime">Anime</a></li>
+<li><a href="#cricket">Cricket</a></li>
+<li><a href="#custom">Customize</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<button class="cart-button" onclick="openCart()">
+
+🛒 Cart
+(<span id="cartCount">0</span>)
+
+</button>
+
+</nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+HIDE AND SEEek
+</h1>
+
+<h2>
+WHAT'S HIDING INSIDE?
+</h2>
+
+<p>
+Unbox the mystery. Discover your favourite figures.
+</p>
+
+<a href="#mystery" class="btn">
+Explore Mystery Boxes
+</a>
+
+<a href="#custom" class="btn">
+Customize Your Figure
+</a>
+
+
+<!-- HERO IMAGE UPLOAD -->
+
+<div class="upload-box">
+
+<strong>
+UPLOAD YOUR HERO IMAGE
+</strong>
+
+<p>
+Add your own website banner here.
+</p>
+
+<label class="upload-label">
+
++ Upload Image
+
+<input
+type="file"
+accept="image/*"
+onchange="heroImage(event)"
+>
+
+</label>
+
+<img id="heroPreview" class="preview">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MYSTERY BOXES -->
+
+<section id="mystery">
+
+<h2 class="section-title">
+🎁 MYSTERY BOXES
+</h2>
+
+<div class="products">
+
+<div class="card">
+
+<div class="product-image">
+<span>+ Your Photo</span>
+</div>
+
+<h3>Anime Mystery Box</h3>
+
+<p>Discover a surprise anime collectible.</p>
+
+<div class="price">₹499</div>
+
+<button class="btn"
+onclick="addToCart('Anime Mystery Box',499)">
+ORDER NOW
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="product-image">
+<span>+ Your Photo</span>
+</div>
+
+<h3>Cricket Mystery Box</h3>
+
+<p>A mystery box for cricket fans.</p>
+
+<div class="price">₹499</div>
+
+<button class="btn"
+onclick="addToCart('Cricket Mystery Box',499)">
+ORDER NOW
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="product-image">
+<span>+ Your Photo</span>
+</div>
+
+<h3>Action Figure Box</h3>
+
+<p>Open the box and discover your figure.</p>
+
+<div class="price">₹599</div>
+
+<button class="btn"
+onclick="addToCart('Action Figure Box',599)">
+ORDER NOW
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="product-image">
+<span>+ Your Photo</span>
+</div>
+
+<h3>Custom Mystery Box</h3>
+
+<p>Create your own mystery experience.</p>
+
+<div class="price">₹699</div>
+
+<button class="btn"
+onclick="addToCart('Custom Mystery Box',699)">
+ORDER NOW
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ACTION -->
+
+<section id="action">
+
+<h2 class="section-title">
+⚡ ACTION FIGURES
+</h2>
+
+<div class="products" id="actionProducts"></div>
+
+</section>
+
+
+<!-- ANIME -->
+
+<section id="anime">
+
+<h2 class="section-title">
+🌟 ANIME FIGURES
+</h2>
+
+<div class="products" id="animeProducts"></div>
+
+</section>
+
+
+<!-- CRICKET -->
+
+<section id="cricket">
+
+<h2 class="section-title">
+🏏 CRICKET FIGURES
+</h2>
+
+<div class="products" id="cricketProducts"></div>
+
+</section>
+
+
+<!-- CUSTOM -->
+
+<section id="custom">
+
+<h2 class="section-title">
+✨ CREATE YOUR OWN FIGURE
+</h2>
+
+<div class="custom-box">
+
+<div class="form-group">
+
+<label>
+Character / Player Name
+</label>
+
+<input
+id="customName"
+type="text"
+placeholder="Enter name"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Figure Type
+</label>
+
+<select id="customType">
+
+<option>Anime</option>
+<option>Cricket</option>
+<option>Action</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Outfit
+</label>
+
+<input
+id="customOutfit"
+type="text"
+placeholder="Describe the outfit"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Pose
+</label>
+
+<input
+id="customPose"
+type="text"
+placeholder="Describe the pose"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Accessories
+</label>
+
+<input
+id="customAccessories"
+type="text"
+placeholder="Add accessories"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Upload Reference Photo
+</label>
+
+<input
+type="file"
+accept="image/*"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Describe Your Custom Figure
+</label>
+
+<textarea
+id="customDescription"
+placeholder="Tell us exactly how you want your figure..."
+></textarea>
+
+</div>
+
+
+<button class="btn" onclick="createCustomOrder()">
+
+ORDER CUSTOM FIGURE
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">
+ABOUT HIDE AND SEEek
+</h2>
+
+<div class="about-text">
+
+<p>
+
+<strong>HIDE AND SEEek</strong> is a mystery-box and
+collectible-figure brand created for people who love
+surprises, collecting and creativity.
+
+</p>
+
+<br>
+
+<p>
+
+Customers can discover mystery boxes containing
+action, anime and cricket figures, or request
+customizable figures made according to their ideas.
+
+</p>
+
+</div>
+
+
+<div class="owner-box">
+
+<h3>
+FOUNDER & OWNER
+</h3>
+
+<div class="owner-name">
+ASLAM AZAD
+</div>
+
+<p>
+Founder & Owner of HIDE AND SEEek
+</p>
+
+</div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+
+<section class="social">
+
+<h2 class="section-title">
+📱 CONTACT US ON INSTAGRAM
+</h2>
+
+<a
+class="instagram"
+href="https://www.instagram.com/hide_and_seeek_001/"
+target="_blank"
+>
+@hide_and_seeek_001
+</a>
+
+<a
+class="instagram"
+href="https://www.instagram.com/tensa_zangetsu_012/"
+target="_blank"
+>
+@tensa_zangetsu_012
+</a>
+
+<p style="margin-top:20px;">
+Click an account to contact HIDE AND SEEek on Instagram.
+</p>
+
+</section>
+
+
+<!-- ORDER FORM -->
+
+<section id="contact">
+
+<h2 class="section-title">
+📦 PLACE YOUR ORDER
+</h2>
+
+<div class="order-box">
+
+<div class="order-summary">
+
+<h3>
+Order Summary
+</h3>
+
+<p id="orderSummary">
+Your cart is currently empty.
+</p>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Customer Name
+</label>
+
+<input
+id="customerName"
+type="text"
+placeholder="Enter your full name"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Phone Number
+</label>
+
+<input
+id="customerPhone"
+type="tel"
+placeholder="Enter your phone number"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Email
+</label>
+
+<input
+id="customerEmail"
+type="email"
+placeholder="Enter your email"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Delivery Address
+</label>
+
+<textarea
+id="customerAddress"
+placeholder="Enter your complete delivery address"
+></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Additional Message
+</label>
+
+<textarea
+id="customerMessage"
+placeholder="Any special instructions?"
+></textarea>
+
+</div>
+
+
+<button
+class="btn"
+onclick="placeOrder()"
+>
+SUBMIT ORDER
+</button>
+
+</div>
+
+
+<!-- SUCCESS -->
+
+<div class="success" id="successBox">
+
+<h2>
+🎉 ORDER DETAILS READY!
+</h2>
+
+<p>
+Thank you for choosing HIDE AND SEEek.
+</p>
+
+<p style="margin:15px 0;">
+
+Your order information has been prepared.
+
+</p>
+
+<p>
+For confirmation, contact:
+</p>
+
+<br>
+
+<a
+class="instagram"
+href="https://www.instagram.com/hide_and_seeek_001/"
+target="_blank"
+>
+📱 Message @hide_and_seeek_001
+</a>
+
+<br>
+
+<a
+class="instagram"
+href="https://www.instagram.com/tensa_zangetsu_012/"
+target="_blank"
+>
+📱 Message @tensa_zangetsu_012
+</a>
+
+<p style="margin-top:20px;">
+Founder & Owner: <strong>ASLAM AZAD</strong>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>
+HIDE AND SEEek
+</h2>
+
+<p>
+Unbox the mystery. Find the extraordinary.
+</p>
+
+<p>
+Founder & Owner: <strong>ASLAM AZAD</strong>
+</p>
+
+<p>
+© 2026 HIDE AND SEEek. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- CART -->
+
+<div class="cart-panel" id="cartPanel">
+
+<button
+class="cart-close"
+onclick="closeCart()"
+>
+×
+</button>
+
+<h2>
+🛒 YOUR CART
+</h2>
+
+<div id="cartItems"></div>
+
+<div class="cart-total">
+
+Total: ₹<span id="cartTotal">0</span>
+
+</div>
+
+<button class="btn"
+onclick="goToOrder()">
+PLACE ORDER
+</button>
+
+</div>
+
+
+<script>
+
+/* ================= CART ================= */
+
+let cart = [];
+
+
+function addToCart(name,price) {
+
+cart.push({
+name:name,
+price:price
+});
+
+updateCart();
+
+openCart();
+
+}
+
+
+function updateCart() {
+
+document.getElementById("cartCount").innerText =
+cart.length;
+
+let container =
+document.getElementById("cartItems");
+
+container.innerHTML = "";
+
+let total = 0;
+
+cart.forEach((item,index)=>{
+
+total += item.price;
+
+container.innerHTML += `
+
+<div class="cart-item">
+
+<strong>${item.name}</strong>
+
+<p>₹${item.price}</p>
+
+<button
+onclick="removeItem(${index})"
+>
+Remove
+</button>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("cartTotal").innerText =
+total;
+
+}
+
+
+function removeItem(index) {
+
+cart.splice(index,1);
+
+updateCart();
+
+}
+
+
+function openCart() {
+
+document
+.getElementById("cartPanel")
+.classList.add("open");
+
+}
+
+
+function closeCart() {
+
+document
+.getElementById("cartPanel")
+.classList.remove("open");
+
+}
+
+
+function goToOrder() {
+
+closeCart();
+
+document
+.getElementById("contact")
+.scrollIntoView();
+
+updateOrderSummary();
+
+}
+
+
+/* ================= ORDER SUMMARY ================= */
+
+function updateOrderSummary() {
+
+let summary =
+document.getElementById("orderSummary");
+
+if(cart.length === 0) {
+
+summary.innerText =
+"Your cart is currently empty.";
+
+return;
+
+}
+
+let total = 0;
+
+let text = "";
+
+cart.forEach(item=>{
+
+text += item.name +
+" — ₹" +
+item.price +
+"<br>";
+
+total += item.price;
+
+});
+
+summary.innerHTML =
+text +
+"<br><strong>Total: ₹" +
+total +
+"</strong>";
+
+}
+
+
+/* ================= PLACE ORDER ================= */
+
+function placeOrder() {
+
+if(cart.length === 0) {
+
+alert("Please add a product to your cart first.");
+
+return;
+
+}
+
+let name =
+document.getElementById("customerName").value;
+
+let phone =
+document.getElementById("customerPhone").value;
+
+let address =
+document.getElementById("customerAddress").value;
+
+if(name === "" || phone === "" || address === "") {
+
+alert(
+"Please enter your name, phone number and delivery address."
+);
+
+return;
+
+}
+
+
+document
+.getElementById("successBox")
+.style.display = "block";
+
+
+document
+.getElementById("successBox")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+
+/*
+The order is displayed as ready for confirmation.
+A real online database/order service can be connected here.
+*/
+
+}
+
+
+/* ================= CUSTOM ORDER ================= */
+
+function createCustomOrder() {
+
+let name =
+document.getElementById("customName").value;
+
+if(name === "") {
+
+alert(
+"Please enter the character/player name first."
+);
+
+return;
+
+}
+
+
+alert(
+"Your custom figure request is ready!\n\n" +
+"HIDE AND SEEek\n" +
+"Founder & Owner: ASLAM AZAD\n\n" +
+"Please continue to the order section."
+);
+
+
+document
+.getElementById("contact")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* ================= HERO IMAGE ================= */
+
+function heroImage(event) {
+
+let file =
+event.target.files[0];
+
+if(!file) return;
+
+let reader =
+new FileReader();
+
+reader.onload=function(e){
+
+let image =
+document.getElementById("heroPreview");
+
+image.src=e.target.result;
+
+image.style.display="block";
+
+};
+
+reader.readAsDataURL(file);
+
+}
+
+
+/* ================= PRODUCT CREATOR ================= */
+
+function createProducts(containerId,prefix,price) {
+
+let container =
+document.getElementById(containerId);
+
+for(let i=1;i<=3;i++){
+
+let card =
+document.createElement("div");
+
+card.className="card";
+
+card.innerHTML=`
+
+<div class="product-image">
+
+<label style="
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+">
+
+<span>+ Upload Product Photo</span>
+
+<input
+type="file"
+accept="image/*"
+style="display:none"
+onchange="productImage(event)"
+>
+
+</label>
+
+</div>
+
+<h3>${prefix} ${i}</h3>
+
+<p>
+Upload your own product photo and details.
+</p>
+
+<div class="price">
+₹${price}
+</div>
+
+<button
+class="btn"
+onclick="addToCart('${prefix} ${i}',${price})"
+>
+ORDER NOW
+</button>
+
+`;
+
+container.appendChild(card);
+
+}
+
+}
+
+
+/* ================= PRODUCT IMAGE ================= */
+
+function productImage(event) {
+
+let file =
+event.target.files[0];
+
+if(!file) return;
+
+let reader =
+new FileReader();
+
+reader.onload=function(e){
+
+let label =
+event.target.parentElement;
+
+label.innerHTML=`
+
+<img
+src="${e.target.result}"
+style="
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:15px;
+"
+>
+
+`;
+
+};
+
+reader.readAsDataURL(file);
+
+}
+
+
+/* ================= CREATE PRODUCTS ================= */
+
+createProducts(
+"actionProducts",
+"Action Figure",
+599
+);
+
+createProducts(
+"animeProducts",
+"Anime Figure",
+699
+);
+
+createProducts(
+"cricketProducts",
+"Cricket Figure",
+799
+);
+
+</script>
+
+</body>
+</html>
